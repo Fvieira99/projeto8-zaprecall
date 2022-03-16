@@ -1,0 +1,126 @@
+.container {
+	background-color: #fb6b6b;
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.logo-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: absolute;
+	top: 40%;
+	transform: translateY(-50%);
+}
+
+.home-logo {
+	width: 55px;
+	height: 65px;
+}
+
+.home-title {
+	font-family: "Righteous";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 31px;
+	color: #ffffff;
+	margin-top: 5px;
+}
+
+.home-button {
+	position: absolute;
+	font-family: "Recursive";
+	color: #d70900;
+	padding: 5px 15px;
+	background-color: #ffffff;
+	border: 1px solid #d70900;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 5px;
+	top: 60%;
+	transform: translateY(-50%);
+}
+
+header {
+	position: fixed;
+	z-index: 2;
+	background-color: #fb6b6b;
+	top: 0;
+	height: 60px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.small-logo {
+	height: 30px;
+}
+
+.main-page-title {
+	font-family: "Righteous";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 25px;
+	color: #ffffff;
+}
+
+main {
+	margin-top: 86px;
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.flashcard {
+	width: 100%;
+	background-color: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 40px;
+	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+	border-radius: 5px;
+}
+
+.flashcard h1 {
+	font-family: "Recursive";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 12px;
+	color: #333333;
+	margin-left: 2%;
+}
+
+.flashcard ion-icon {
+	font-weight: 700;
+	color: #333333;
+	font-size: 15px;
+	margin-right: 2%;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	height: 50px;
+	background-color: #ffffff;
+	box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+}
+
+.count,
+.done {
+	font-family: "Recursive", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	color: #333333;
+}
