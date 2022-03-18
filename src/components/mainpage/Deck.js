@@ -1,53 +1,51 @@
 import Flashcard from "./Flashcard";
 
-const flascards = [
+const flashcards = [
 	{
-		number: 1,
 		question: "O que é JSX?",
 		answer: "Uma extensão de linguagem do JavaScript",
 	},
 	{
-		number: 2,
-		question: "O que é JSX?",
-		answer: "Uma extensão de linguagem do JavaScript",
+		question: " O React é __",
+		answer: "Uma biblioteca JavaScript para construção de interfaces",
 	},
 	{
-		number: 3,
-		question: "O que é JSX?",
-		answer: "Uma extensão de linguagem do JavaScript",
+		question: "Componentes devem iniciar com __",
+		answer: "Letra maiúscula",
 	},
 	{
-		number: 4,
-		question: "O que é JSX?",
-		answer: "Uma extensão de linguagem do JavaScript",
+		question: "Podemos colocar __ dentro do JSX ",
+		answer: "Expressões",
 	},
 	{
-		number: 5,
-		question: "O que é JSX?",
-		answer: "Uma extensão de linguagem do JavaScript",
+		question: "O ReactDOM nos ajuda __",
+		answer: "Interagindo com a DOM para colocar componentes React na mesma",
 	},
 	{
-		number: 6,
-		question: "O que é JSX?",
-		answer: "Uma extensão de linguagem do JavaScript",
+		question: "Usamos o npm para __ ",
+		answer: "Gerenciar os pacotes necessários e suas dependências",
 	},
 	{
-		number: 7,
-		question: "O que é JSX?",
-		answer: "Uma extensão de linguagem do JavaScript",
+		question: "Usamos props para __",
+		answer: "Passar diferentes informações para componentes ",
 	},
 	{
-		number: 8,
-		question: "O que é JSX?",
-		answer: "Uma extensão de linguagem do JavaScript",
+		question: "Usamos estado (state) para __",
+		answer:
+			"Dizer para o React quais informações quando atualizadas devem renderizar a tela novamente",
 	},
 ];
 
+function comparador() {
+	return Math.random() - 0.5;
+}
+
 function Deck(props) {
+	const sortedFlascards = [...flashcards.sort(comparador)];
 	const { addIcon, changeCount, count, countSuccess, success } = props;
 	return (
 		<main>
-			{flascards.map(({ number, question, answer }) => (
+			{sortedFlascards.map((flashcard, index) => (
 				<>
 					<Flashcard
 						countSuccess={countSuccess}
@@ -55,10 +53,10 @@ function Deck(props) {
 						count={count}
 						changeCount={changeCount}
 						addIcon={addIcon}
-						key={number}
-						number={number}
-						question={question}
-						answer={answer}
+						key={index + 1}
+						number={index + 1}
+						question={flashcard.question}
+						answer={flashcard.answer}
 					/>
 				</>
 			))}
