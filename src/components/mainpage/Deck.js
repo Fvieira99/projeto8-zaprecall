@@ -44,15 +44,17 @@ const flascards = [
 ];
 
 function Deck(props) {
-	const { addIcon, changeCount, count } = props;
+	const { addIcon, changeCount, count, countSuccess, success } = props;
 	return (
 		<main>
 			{flascards.map(({ number, question, answer }) => (
 				<>
 					<Flashcard
+						countSuccess={countSuccess}
+						success={success}
 						count={count}
-						addIcon={addIcon}
 						changeCount={changeCount}
+						addIcon={addIcon}
 						key={number}
 						number={number}
 						question={question}

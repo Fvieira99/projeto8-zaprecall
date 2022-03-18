@@ -15,14 +15,8 @@
 	align-items: center;
 }
 
-.home {
-	position: initial;
-	z-index: 4;
-}
-
 .main-page {
-	position: relative;
-	z-index: 2;
+	overflow: auto;
 }
 
 .home-logo {
@@ -81,6 +75,7 @@
 
 main {
 	margin-top: 86px;
+	margin-bottom: 170px;
 	width: 95%;
 	display: flex;
 	flex-direction: column;
@@ -88,14 +83,12 @@ main {
 }
 
 .flashcard {
-	position: initial;
-	z-index: 2;
 	width: 100%;
 	background-color: #ffffff;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 40px;
+	height: 50px;
 	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
 	border-radius: 5px;
 }
@@ -104,17 +97,21 @@ h3 {
 	font-family: "Recursive";
 	font-style: normal;
 	font-weight: 700;
-	font-size: 12px;
+	font-size: 15px;
 	color: #333333;
 	margin-left: 2%;
 }
 
-.flashcard ion-icon {
+ion-icon {
 	font-weight: 700;
 	color: #333333;
-	font-size: 15px;
+	font-size: 20px;
 	margin-right: 2%;
 	cursor: pointer;
+}
+
+.flashcard div {
+	margin-right: 2%;
 }
 
 .flashcard-visible {
@@ -122,7 +119,7 @@ h3 {
 	background-color: #ffffd5;
 	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
 	border-radius: 5px;
-	height: 80px;
+	height: 90px;
 	position: relative;
 }
 
@@ -142,18 +139,19 @@ h3 {
 	font-family: "Recursive";
 	font-style: normal;
 	font-weight: 400;
-	font-size: 12px;
+	font-size: 15px;
 	line-height: 14px;
 	color: #333333;
 }
 
 footer {
 	position: fixed;
+	z-index: 2;
 	bottom: 0;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	height: 50px;
+	height: 100px;
 	background-color: #ffffff;
 	box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
 	justify-content: center;
@@ -163,6 +161,7 @@ footer {
 
 .count-container {
 	display: flex;
+	gap: 5px;
 }
 
 .count,
@@ -170,25 +169,26 @@ footer {
 	font-family: "Recursive", sans-serif;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 12px;
+	font-size: 15px;
 	color: #333333;
 }
 
-.flashcard-visible .buttons {
+.flashcard-visible .answer-buttons {
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-end;
 	height: 100%;
 }
 
-.buttons button {
+.answer-buttons button {
 	font-family: "Recursive";
 	font-style: normal;
 	font-weight: 400;
-	font-size: 10px;
-	line-height: 8px;
-	width: 70px;
-	min-height: 25px;
+	font-size: 14px;
+	color: #fff;
+	word-break: keep-all;
+	width: 90px;
+	height: 35px;
 	margin-bottom: 5px;
 	border-radius: 5px;
 	border: none;
@@ -219,8 +219,65 @@ footer {
 	text-decoration: line-through;
 }
 
-.checkmark-circle,
-.help-circle,
-.close-circle {
-	background-color: #2fbe34;
+.icons-container {
+	display: flex;
+}
+
+.checkmark-circle ion-icon {
+	color: #2fbe34;
+	font-size: 20px;
+}
+
+.help-circle ion-icon {
+	color: #ff922e;
+	font-size: 20px;
+}
+
+.close-circle ion-icon {
+	color: #ff3030;
+	font-size: 20px;
+}
+
+.final-footer {
+	height: 150px;
+	justify-content: space-evenly;
+}
+
+.try-again,
+.congratulations {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.try-again span,
+.congratulations span {
+	font-family: "Recursive";
+	font-weight: 700;
+	font-style: normal;
+	font-size: 16px;
+	color: #333333;
+}
+
+.final-message {
+	text-align: center;
+	font-family: "Recursive";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 14px;
+	color: #333333;
+}
+
+.final-footer button {
+	font-family: "Recursive";
+	color: #fff;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	background-color: #fb6b6b;
+	border: none;
+	padding: 10px 10px;
+	border-radius: 5px;
+	cursor: pointer;
 }

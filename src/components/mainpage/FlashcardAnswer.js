@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 function FlashcardAnswer(props) {
-	const { answer, number, count, changeCount, addIcon } = props;
+	const { answer, number, count, changeCount, addIcon, countSuccess, success } =
+		props;
 
 	const [flashcardState, setFlashcardState] = useState("notAnswered");
 
@@ -9,7 +10,7 @@ function FlashcardAnswer(props) {
 		return (
 			<div className="flashcard-visible">
 				<span>{answer}</span>
-				<div className="buttons">
+				<div className="answer-buttons">
 					<button
 						className="tryAgain"
 						onClick={() => {
@@ -18,7 +19,7 @@ function FlashcardAnswer(props) {
 							addIcon("close-circle");
 						}}
 					>
-						Try Again!
+						Não lembrei!
 					</button>
 					<button
 						className="almost"
@@ -26,9 +27,10 @@ function FlashcardAnswer(props) {
 							setFlashcardState("almost");
 							changeCount(count);
 							addIcon("help-circle");
+							countSuccess(success);
 						}}
 					>
-						Almost forgot it
+						Quase não lembrei!
 					</button>
 					<button
 						className="zap"
@@ -36,6 +38,7 @@ function FlashcardAnswer(props) {
 							setFlashcardState("zap");
 							changeCount(count);
 							addIcon("checkmark-circle");
+							countSuccess(success);
 						}}
 					>
 						Zap!
@@ -48,24 +51,27 @@ function FlashcardAnswer(props) {
 			return (
 				<div className="flashcard">
 					<h3 className="red">Pergunta {number}</h3>
-					<ion-icon className="close-circle" name="close-circle"></ion-icon>
+					<div className="close-circle">
+						<ion-icon name="close-circle"></ion-icon>
+					</div>
 				</div>
 			);
 		} else if (flashcardState === "almost") {
 			return (
 				<div className="flashcard">
 					<h3 className="orange">Pergunta {number}</h3>
-					<ion-icon className="help-circle" name="help-circle"></ion-icon>
+					<div className="help-circle">
+						<ion-icon name="help-circle"></ion-icon>
+					</div>
 				</div>
 			);
 		} else {
 			return (
 				<div className="flashcard">
 					<h3 className="green">Pergunta {number}</h3>
-					<ion-icon
-						className="checkmark-circle"
-						name="checkmark-circle"
-					></ion-icon>
+					<div className="checkmark-circle">
+						<ion-icon name="checkmark-circle"></ion-icon>
+					</div>
 				</div>
 			);
 		}

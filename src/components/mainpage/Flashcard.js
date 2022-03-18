@@ -3,7 +3,17 @@ import FlashcardAnswer from "./FlashcardAnswer";
 import FlashcardQuestion from "./FlashcardQuestion";
 
 function Flashcard(props) {
-	const { number, question, answer, addIcon, changeCount, count } = props;
+	const {
+		number,
+		question,
+		answer,
+		addIcon,
+		changeCount,
+		count,
+		countSuccess,
+		success,
+	} = props;
+
 	const [flashcard, setFlashcard] = useState("hidden");
 
 	function setFlashcardState(flashcard) {
@@ -32,6 +42,8 @@ function Flashcard(props) {
 	} else {
 		return (
 			<FlashcardAnswer
+				countSuccess={countSuccess}
+				success={success}
 				addIcon={addIcon}
 				answer={answer}
 				number={number}
