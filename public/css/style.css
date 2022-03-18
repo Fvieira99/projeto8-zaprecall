@@ -1,4 +1,12 @@
-.container {
+.title {
+	font-family: "Righteous";
+	font-style: normal;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.home,
+.main-page {
 	background-color: #fb6b6b;
 	min-height: 100vh;
 	width: 100%;
@@ -6,7 +14,18 @@
 	flex-direction: column;
 	align-items: center;
 }
-.logo-container {
+
+.home {
+	position: initial;
+	z-index: 4;
+}
+
+.main-page {
+	position: relative;
+	z-index: 2;
+}
+
+.home-logo {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -15,19 +34,14 @@
 	transform: translateY(-50%);
 }
 
-.home-logo {
+.home-logo img {
 	width: 55px;
 	height: 65px;
 }
 
-.home-title {
-	font-family: "Righteous";
-	font-style: normal;
-	font-weight: 400;
+.home-logo h3 {
 	font-size: 25px;
 	line-height: 31px;
-	color: #ffffff;
-	margin-top: 5px;
 }
 
 .home-button {
@@ -43,9 +57,9 @@
 	transform: translateY(-50%);
 }
 
-header {
+.main-page-logo {
 	position: fixed;
-	z-index: 2;
+	z-index: 1;
 	background-color: #fb6b6b;
 	top: 0;
 	height: 60px;
@@ -56,16 +70,13 @@ header {
 	gap: 10px;
 }
 
-.small-logo {
-	height: 30px;
+.main-page-logo img {
+	height: 40px;
 }
 
-.main-page-title {
-	font-family: "Righteous";
-	font-style: normal;
-	font-weight: 400;
+.main-page-logo h3 {
 	font-size: 25px;
-	color: #ffffff;
+	line-height: 31px;
 }
 
 main {
@@ -77,6 +88,8 @@ main {
 }
 
 .flashcard {
+	position: initial;
+	z-index: 2;
 	width: 100%;
 	background-color: #ffffff;
 	display: flex;
@@ -87,7 +100,7 @@ main {
 	border-radius: 5px;
 }
 
-.flashcard h1 {
+h3 {
 	font-family: "Recursive";
 	font-style: normal;
 	font-weight: 700;
@@ -101,6 +114,37 @@ main {
 	color: #333333;
 	font-size: 15px;
 	margin-right: 2%;
+	cursor: pointer;
+}
+
+.flashcard-visible {
+	width: 100%;
+	background-color: #ffffd5;
+	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+	border-radius: 5px;
+	height: 80px;
+	position: relative;
+}
+
+.flashcard-visible img {
+	width: 20px;
+	height: 15px;
+	position: absolute;
+	right: 2%;
+	bottom: 10%;
+	cursor: pointer;
+}
+
+.flashcard-visible span {
+	position: absolute;
+	top: 10%;
+	left: 2%;
+	font-family: "Recursive";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	color: #333333;
 }
 
 footer {
@@ -108,12 +152,17 @@ footer {
 	bottom: 0;
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	height: 50px;
 	background-color: #ffffff;
 	box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
 	justify-content: center;
 	align-items: center;
 	gap: 5px;
+}
+
+.count-container {
+	display: flex;
 }
 
 .count,
@@ -123,4 +172,55 @@ footer {
 	font-weight: 400;
 	font-size: 12px;
 	color: #333333;
+}
+
+.flashcard-visible .buttons {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-end;
+	height: 100%;
+}
+
+.buttons button {
+	font-family: "Recursive";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 8px;
+	width: 70px;
+	min-height: 25px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	border: none;
+}
+
+.zap {
+	background-color: #2fbe34;
+}
+.almost {
+	background-color: #ff922e;
+}
+.tryAgain {
+	background-color: #ff3030;
+}
+
+.green {
+	color: #2fbe34;
+	text-decoration: line-through;
+}
+
+.red {
+	color: #ff3030;
+	text-decoration: line-through;
+}
+
+.orange {
+	color: #ff922e;
+	text-decoration: line-through;
+}
+
+.checkmark-circle,
+.help-circle,
+.close-circle {
+	background-color: #2fbe34;
 }
