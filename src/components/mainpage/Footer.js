@@ -1,7 +1,9 @@
 import Win from "./Win";
 import Lose from "./Lose";
+import { useState } from "react";
+
 function Footer(props) {
-	const { count, icons, success } = props;
+	const { count, icons, success, restartGame } = props;
 	console.log(success);
 	if (count < 8) {
 		return (
@@ -21,9 +23,9 @@ function Footer(props) {
 		);
 	} else {
 		if (success === 8) {
-			return <Win icons={icons} />;
+			return <Win icons={icons} restartGame={restartGame} />;
 		} else {
-			return <Lose icons={icons} />;
+			return <Lose icons={icons} restartGame={restartGame} />;
 		}
 	}
 }

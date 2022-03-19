@@ -1,15 +1,15 @@
 import { useState } from "react";
-import Home from "../home/Home";
+import party from "../../assets/party.png";
 
 function Win(props) {
-	const { icons } = props;
+	const { icons, restartGame } = props;
 	const [gameState, setGameState] = useState("win");
 	return (
 		<>
 			{gameState === "win" ? (
 				<footer className="final-footer">
 					<div className="congratulations">
-						<img src="assets/party.png"></img>
+						<img src={party}></img>
 						<span>PARABÉNS!</span>
 					</div>
 					<span className="final-message">
@@ -25,13 +25,14 @@ function Win(props) {
 					<button
 						onClick={() => {
 							setGameState("restart");
+							restartGame("Home");
 						}}
 					>
 						Reiniciar Recall
 					</button>
 				</footer>
 			) : (
-				<Home />
+				<></>
 			)}
 		</>
 	);

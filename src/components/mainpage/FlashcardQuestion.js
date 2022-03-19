@@ -1,3 +1,4 @@
+import arrow from "../../assets/setinha.png";
 function FlashcardQuestion(props) {
 	const { question, setFlashcardState } = props;
 	return (
@@ -5,7 +6,7 @@ function FlashcardQuestion(props) {
 			<div className="flashcard-visible">
 				<span>{question}</span>
 				<img
-					src="assets/setinha.png"
+					src={arrow}
 					onClick={() => {
 						setFlashcardState("answer");
 					}}

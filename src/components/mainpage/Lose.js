@@ -1,15 +1,16 @@
 import { useState } from "react";
 import Home from "../home/Home";
+import sad from "../../assets/sad.png";
 
 function Lose(props) {
-	const { icons } = props;
+	const { icons, restartGame } = props;
 	const [gameState, setGameState] = useState("lose");
 	return (
 		<>
 			{gameState === "lose" ? (
 				<footer className="final-footer">
 					<div className="try-again">
-						<img src="assets/sad.png"></img>
+						<img src={sad}></img>
 						<span>Putz!</span>
 					</div>
 					<span className="final-message">
@@ -27,13 +28,14 @@ function Lose(props) {
 					<button
 						onClick={() => {
 							setGameState("restart");
+							restartGame("Home");
 						}}
 					>
 						Reiniciar Recall
 					</button>
 				</footer>
 			) : (
-				<Home />
+				<></>
 			)}
 		</>
 	);

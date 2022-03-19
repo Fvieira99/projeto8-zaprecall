@@ -3,7 +3,8 @@ import Logo from "../Logo";
 import Footer from "./Footer";
 import { useState } from "react";
 
-function MainPage() {
+function MainPage(props) {
+	const { restartGame, sortedFlashcards } = props;
 	const [count, setCount] = useState(0);
 	const [icons, setIcons] = useState([]);
 	const [success, setSuccess] = useState(0);
@@ -24,13 +25,19 @@ function MainPage() {
 		<div className="main-page">
 			<Logo classname="main-page-logo" />
 			<Deck
+				sortedFlashcards={sortedFlashcards}
 				addIcon={addIcon}
 				changeCount={changeCount}
 				count={count}
 				countSuccess={countSuccess}
 				success={success}
 			/>
-			<Footer count={count} icons={icons} success={success} />
+			<Footer
+				count={count}
+				icons={icons}
+				success={success}
+				restartGame={restartGame}
+			/>
 		</div>
 	);
 }

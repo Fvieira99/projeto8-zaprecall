@@ -281,3 +281,9 @@ footer {
 	border-radius: 5px;
 	cursor: pointer;
 }
+
+@media (min-width: 450px) {
+	main {
+		width: 450px;
+	}
+} ;

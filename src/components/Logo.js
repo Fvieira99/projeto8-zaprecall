@@ -1,7 +1,9 @@
+import logo from "../assets/logo.png";
+
 function Logo({ classname }) {
 	return (
 		<div className={classname}>
-			<img src="assets/logo.png"></img>
+			<img src={logo}></img>
 			<h3 className="title">ZapRecall</h3>
 		</div>
 	);

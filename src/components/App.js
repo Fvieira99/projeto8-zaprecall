@@ -1,5 +1,6 @@
 import Home from "./home/Home";
-import MainPage from "./mainpage/MainPage";
+import "../css/reset.css";
+import "../css/style.css";
 
 function App() {
 	return (
