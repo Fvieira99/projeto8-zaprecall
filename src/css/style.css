@@ -1,3 +1,12 @@
+* {
+	box-sizing: border-box;
+	--pages-bg-color: #fb6b6b;
+	--message-color: #333333;
+	--icon-button-green: #2fbe34;
+	--icon-button-red: #ff3030;
+	--icon-button-orange: #ff922e;
+}
+
 .title {
 	font-family: "Righteous";
 	font-style: normal;
@@ -7,7 +16,7 @@
 
 .home,
 .main-page {
-	background-color: #fb6b6b;
+	background-color: var(--pages-bg-color);
 	min-height: 100vh;
 	width: 100%;
 	display: flex;
@@ -54,7 +63,7 @@
 .main-page-logo {
 	position: fixed;
 	z-index: 1;
-	background-color: #fb6b6b;
+	background-color: var(--pages-bg-color);
 	top: 0;
 	height: 60px;
 	width: 100%;
@@ -98,13 +107,13 @@ h3 {
 	font-style: normal;
 	font-weight: 700;
 	font-size: 15px;
-	color: #333333;
+	color: var(--message-color);
 	margin-left: 2%;
 }
 
 ion-icon {
 	font-weight: 700;
-	color: #333333;
+	color: var(--message-color);
 	font-size: 20px;
 	margin-right: 2%;
 	cursor: pointer;
@@ -141,7 +150,7 @@ ion-icon {
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 14px;
-	color: #333333;
+	color: var(--message-color);
 }
 
 footer {
@@ -170,7 +179,7 @@ footer {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 15px;
-	color: #333333;
+	color: var(--message-color);
 }
 
 .flashcard-visible .answer-buttons {
@@ -185,7 +194,7 @@ footer {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;
-	color: #fff;
+	color: #ffffff;
 	word-break: keep-all;
 	width: 90px;
 	height: 35px;
@@ -195,27 +204,27 @@ footer {
 }
 
 .zap {
-	background-color: #2fbe34;
+	background-color: var(--icon-button-green);
 }
 .almost {
-	background-color: #ff922e;
+	background-color: var(--icon-button-orange);
 }
 .tryAgain {
-	background-color: #ff3030;
+	background-color: var(--icon-button-red);
 }
 
 .green {
-	color: #2fbe34;
+	color: var(--icon-button-green);
 	text-decoration: line-through;
 }
 
 .red {
-	color: #ff3030;
+	color: var(--icon-button-red);
 	text-decoration: line-through;
 }
 
 .orange {
-	color: #ff922e;
+	color: var(--icon-button-orange);
 	text-decoration: line-through;
 }
 
@@ -224,17 +233,17 @@ footer {
 }
 
 .checkmark-circle ion-icon {
-	color: #2fbe34;
+	color: var(--icon-button-green);
 	font-size: 20px;
 }
 
 .help-circle ion-icon {
-	color: #ff922e;
+	color: var(--icon-button-orange);
 	font-size: 20px;
 }
 
 .close-circle ion-icon {
-	color: #ff3030;
+	color: var(--icon-button-red);
 	font-size: 20px;
 }
 
@@ -256,7 +265,7 @@ footer {
 	font-weight: 700;
 	font-style: normal;
 	font-size: 16px;
-	color: #333333;
+	color: var(--message-color);
 }
 
 .final-message {
@@ -266,7 +275,7 @@ footer {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 14px;
-	color: #333333;
+	color: var(--message-color);
 }
 
 .final-footer button {
@@ -275,7 +284,7 @@ footer {
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
-	background-color: #fb6b6b;
+	background-color: var(--pages-bg-color);
 	border: none;
 	padding: 10px 10px;
 	border-radius: 5px;

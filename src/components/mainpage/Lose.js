@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Home from "../home/Home";
 import sad from "../../assets/sad.png";
 
 function Lose(props) {
@@ -10,7 +9,7 @@ function Lose(props) {
 			{gameState === "lose" ? (
 				<footer className="final-footer">
 					<div className="try-again">
-						<img src={sad}></img>
+						<img src={sad} alt="Sad Emoji"></img>
 						<span>Putz!</span>
 					</div>
 					<span className="final-message">
@@ -19,9 +18,9 @@ function Lose(props) {
 						Mas não desanime!
 					</span>
 					<div className="icons-container">
-						{icons.map((icon) => (
+						{icons.map((icon, index) => (
 							<div className={icon}>
-								<ion-icon name={icon}></ion-icon>
+								<ion-icon key={index} name={icon}></ion-icon>
 							</div>
 						))}
 					</div>

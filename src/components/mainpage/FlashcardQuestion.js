@@ -7,6 +7,7 @@ function FlashcardQuestion(props) {
 				<span>{question}</span>
 				<img
 					src={arrow}
+					alt="Arrow"
 					onClick={() => {
 						setFlashcardState("answer");
 					}}

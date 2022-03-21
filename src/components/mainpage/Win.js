@@ -9,16 +9,16 @@ function Win(props) {
 			{gameState === "win" ? (
 				<footer className="final-footer">
 					<div className="congratulations">
-						<img src={party}></img>
+						<img src={party} alt="Party Emoji"></img>
 						<span>PARABÉNS!</span>
 					</div>
 					<span className="final-message">
 						Você não esqueceu nenhum flashcard!
 					</span>
 					<div className="icons-container">
-						{icons.map((icon) => (
+						{icons.map((icon, index) => (
 							<div className={icon}>
-								<ion-icon name={icon}></ion-icon>
+								<ion-icon key={index} name={icon}></ion-icon>
 							</div>
 						))}
 					</div>

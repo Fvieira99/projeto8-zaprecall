@@ -1,10 +1,8 @@
 import Win from "./Win";
 import Lose from "./Lose";
-import { useState } from "react";
 
 function Footer(props) {
 	const { count, icons, success, restartGame } = props;
-	console.log(success);
 	if (count < 8) {
 		return (
 			<footer>
