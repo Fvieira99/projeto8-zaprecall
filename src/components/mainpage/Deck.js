@@ -12,19 +12,17 @@ function Deck(props) {
 	return (
 		<main>
 			{sortedFlashcards.map((flashcard, index) => (
-				<>
-					<Flashcard
-						countSuccess={countSuccess}
-						success={success}
-						count={count}
-						changeCount={changeCount}
-						addIcon={addIcon}
-						key={index + 1}
-						number={index + 1}
-						question={flashcard.question}
-						answer={flashcard.answer}
-					/>
-				</>
+				<Flashcard
+					countSuccess={countSuccess}
+					success={success}
+					count={count}
+					changeCount={changeCount}
+					addIcon={addIcon}
+					key={index}
+					number={index + 1}
+					question={flashcard.question}
+					answer={flashcard.answer}
+				/>
 			))}
 		</main>
 	);

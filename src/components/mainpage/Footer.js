@@ -11,8 +11,8 @@ function Footer(props) {
 					<h3 className="done">Concluídos</h3>
 				</div>
 				<div className="icons-container">
-					{icons.map((icon) => (
-						<div className={icon}>
+					{icons.map((icon, index) => (
+						<div key={index} className={icon}>
 							<ion-icon name={icon}></ion-icon>
 						</div>
 					))}

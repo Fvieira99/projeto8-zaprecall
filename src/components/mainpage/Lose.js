@@ -19,8 +19,8 @@ function Lose(props) {
 					</span>
 					<div className="icons-container">
 						{icons.map((icon, index) => (
-							<div className={icon}>
-								<ion-icon key={index} name={icon}></ion-icon>
+							<div key={index} className={icon}>
+								<ion-icon name={icon}></ion-icon>
 							</div>
 						))}
 					</div>
